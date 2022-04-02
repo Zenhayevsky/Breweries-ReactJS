@@ -22,21 +22,21 @@ section {
 ol {
   position: relative;
   display: flex;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   align-content: flex-start !important;
   font-size: 20px;
   font-weight: 400;
 }
 
 ul {
-  Width: 3-0px;
+  Width: 500px;
   Height: 21px;
   font-family: Work Sans;
   font-weight: 400, Regular;
   Size: 14px;
   line-height: 21px;
-  margin-top:220px;
+  margin-top:200px;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
