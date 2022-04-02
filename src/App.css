@@ -2,9 +2,29 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
+} */
+
+.Bee-Logo {
+  position: absolute;
+  width: 278px;
+  height: 278px;
+  left: 29px;
+  top: 500px;
+}
+
+p {
+  color: black;
+  Width: 290px;
+  Height: 21px;
+  Top: 453px;
+  Left: 570px;
+  font-family: Work Sans;
+  font-weight: 400, Regular;
+  Size: 14px;
+  line-height: 21px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,7 +34,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #F2EC54;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
