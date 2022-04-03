@@ -8,12 +8,27 @@
 } */
 
 .Bee-Logo {
+  display: flex;
   position: absolute;
   width: 220px;
   height: 220x;
   left: 29px;
-  top: 400px;
+  top: 550px;
 }
+
+.placeForName {
+  width: 370px;
+  height: 43px;
+  border: 1px solid #D4D4D8;
+  box-sizing: border-box;
+  border-radius:4px;
+  gap: 12px;
+  padding:10px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Work Sans;
+}
+
 section {
   margin-top: 0px;
    
@@ -24,19 +39,15 @@ ol {
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
-  align-content: flex-start !important;
-  font-size: 20px;
-  font-weight: 400;
+  align-content: flex-start;
 }
 
 ul {
-  Width: 3-0px;
+  Width: 450px;
   Height: 21px;
   font-family: Work Sans;
-  font-weight: 400, Regular;
-  Size: 14px;
   line-height: 21px;
-  margin-top:220px;
+  margin-top:280px;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
@@ -54,17 +65,23 @@ ul {
   /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: black;
+  font-style: normal;  
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  line-height: 21px;
+  font-family: Work Sans;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
