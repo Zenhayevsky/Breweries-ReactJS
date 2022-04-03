@@ -1,13 +1,11 @@
 import React from 'react';
-import bee from './images/bee.png';
+import bee from './Images/bee.png';
 import './App.css';
-import Font from './fontes';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Font/>
         <section>
           <ul>
             <ol>
@@ -22,6 +20,13 @@ function App() {
             </ol>
             <ol>
               <input className="placeForName" placeholder="Full name"></input>
+            </ol>
+            <ol className="sendData">
+              <input type="checkbox"></input>
+              <span>Are you older than 18 years old?</span>
+            </ol>
+            <ol className="sendData">
+              <button>Enter</button>
             </ol>
           </ul>
         </section>

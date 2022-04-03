@@ -31,7 +31,6 @@
 
 section {
   margin-top: 0px;
-   
 }
 
 ol {
@@ -42,12 +41,32 @@ ol {
   align-content: flex-start;
 }
 
+span {
+  margin-left: 3px;
+}
+.sendData {
+  justify-content: center;
+  margin-top: 0px;
+  position: relative;
+}
+
 ul {
-  Width: 450px;
+  Width: 410px;
   Height: 21px;
   font-family: Work Sans;
   line-height: 21px;
   margin-top:280px;
+  margin-right: 80px;
+}
+
+button {
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: row;
+  position: static;
+  background-color: #52525B;
+  color: white;
+  border-radius: 4px;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
