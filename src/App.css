@@ -69,12 +69,6 @@ button {
   border-radius: 4px;
 }
 
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
 .App-header {
   background-color: #F2EC54;
   min-height: 100vh;
@@ -87,9 +81,9 @@ button {
   font-style: normal;  
   font-size: 18px;
   font-weight: bold;
-  display: flex;
   line-height: 21px;
   font-family: Work Sans;
+  height: 800px;
 }
 
 .App-link {
