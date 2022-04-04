@@ -1,5 +1,5 @@
 import React from 'react';
-import bee from './Images/bee.png';
+import bee from './images/bee.png';
 import './App.css';
 
 function App() {

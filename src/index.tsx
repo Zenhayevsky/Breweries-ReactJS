@@ -2,13 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import BreweriesHome from './pages/BreweriesHome/BreweriesHome';
 import reportWebVitals from './reportWebVitals';
 import Font from './Fontes';
 
+// import Routes from './routes';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    <Font/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/BreweriesHome" element={<BreweriesHome />} />
+      </Routes>
+    </Router>
+    <Font />
   </React.StrictMode>,
   document.getElementById('root')
 );

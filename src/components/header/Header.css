@@ -1,0 +1,37 @@
+
+.header {
+  background-color: #F2EC54;
+  position: absolute;
+  width: 1440px;
+  height: 72px;
+}
+
+.gobackImg {
+  position: absolute;
+  left:1.5%;
+  top: 20%;
+  bottom :10%;
+}
+
+.goback {
+  width: 120px;
+  height: 45px;
+  font-family: Work Sans;
+  font-weight: 400;
+  font-size: 30px;
+  line-height:150%;
+  margin-left: 76px;
+  margin-top: 13px;
+}
+
+.nomeUsuario {
+  position:absolute;
+  width: 145px;
+  height: 45px;
+  left:1255px;
+  top:14px;
+  font-family: Work Sans;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 150%;
+}
