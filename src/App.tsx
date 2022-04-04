@@ -1,8 +1,24 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import bee from './images/bee.png';
+import { Navigate, Route, Link } from 'react-router-dom';
 import './App.css';
 
 function App() {
+
+  const [checked, setChecked] = useState(false);
+  const [filled, setFilled] = useState("");
+  const [desabilitado, setDesabilitado] = useState(true)
+
+  useEffect(() => {
+
+    (checked && filled) ? setDesabilitado(false) : setDesabilitado(true)
+
+  }, [checked, filled]);
+
+  useEffect(() => {
+    console.log(`mudou o estado ${checked} e o nome para ${filled}`)
+  }, [checked, filled]);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,30 +35,20 @@ function App() {
               </span>
             </ol>
             <ol>
-              <input className="placeForName" placeholder="Full name"></input>
+              <input className="placeForName" placeholder="Full name" onChange={e => setFilled(e.target.value)}></input>
             </ol>
             <ol className="sendData">
-              <input type="checkbox"></input>
-              <span>Are you older than 18 years old?</span>
+              <form>
+                <input type="checkbox" checked={checked} onChange={e => setChecked(e.target.checked)} ></input>
+                <span>Are you older than 18 years old?</span>
+              </form>
             </ol>
             <ol className="sendData">
-              <button>Enter</button>
+              <button onClick={() => window.location.replace("/breweriesHome")} disabled={desabilitado} >Enter</button>
             </ol>
           </ul>
         </section>
         <img src={bee} alt="logo" className="Bee-Logo" />
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        {/* <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
       </header>
     </div>
   );
