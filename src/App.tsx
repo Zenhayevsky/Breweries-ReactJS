@@ -1,23 +1,38 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import bee from './images/bee.png';
 import { Navigate, Route, Link } from 'react-router-dom';
 import './App.css';
 
+const useStateWithLocalStorage = (localStorageKey : any) => {
+  const [value, setValue] = React.useState(
+    localStorage.getItem(localStorageKey) || ''
+    );
+
+  React.useEffect(() => {
+    localStorage.setItem(localStorageKey, value);
+  }, [value]);
+
+  return [value, setValue];
+}
+
 function App() {
 
   const [checked, setChecked] = useState(false);
-  const [filled, setFilled] = useState("");
   const [desabilitado, setDesabilitado] = useState(true)
 
+  
+  const [value, setValue] = useStateWithLocalStorage (
+    'MyValueInLocalStorage'
+  );
+  
+  const onChange = ( event : any) => setValue(event.target.value);
+
   useEffect(() => {
 
-    (checked && filled) ? setDesabilitado(false) : setDesabilitado(true)
+    (checked && value) ? setDesabilitado(false) : setDesabilitado(true)
+    console.log(`mudou o estado ${checked} e o nome para ${value}`)
 
-  }, [checked, filled]);
-
-  useEffect(() => {
-    console.log(`mudou o estado ${checked} e o nome para ${filled}`)
-  }, [checked, filled]);
+  }, [checked, value]);
 
   return (
     <div className="App">
@@ -35,7 +50,7 @@ function App() {
               </span>
             </ol>
             <ol>
-              <input className="placeForName" placeholder="Full name" onChange={e => setFilled(e.target.value)}></input>
+              <input className="placeForName" placeholder="Full name" onChange={e => setValue(e.target.value)}></input>
             </ol>
             <ol className="sendData">
               <form>
