@@ -28,10 +28,12 @@
   position:absolute;
   width: 145px;
   height: 45px;
-  left:1255px;
-  top:14px;
+  left: 1255PX;
+  top: 14px;
   font-family: Work Sans;
   font-weight: 400;
   font-size: 30px;
   line-height: 150%;
+  font-style: normal;
+  white-space: nowrap;
 }
