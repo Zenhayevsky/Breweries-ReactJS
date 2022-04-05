@@ -2,7 +2,16 @@ import React from 'react';
 import './Header.css';
 import vector from '../../images/Vector.png';
 
-const Header = () => (
+
+function Header () {
+    // const useStateWithLocalStorage = (nome : any) => {
+    //     const [name, setName] = React.useState(
+    //       localStorage.getItem(nome) || ''
+    //       );
+    //     }
+  const nomeUsuario = localStorage.getItem('ls_nome');
+
+  return (    
     <div className="header">
         <div>
             <a href={"/"}>
@@ -15,9 +24,10 @@ const Header = () => (
             </div>
         </div>
         <div className="nomeUsuario">
-            <span>Full Name</span>
+            {nomeUsuario}
         </div>
     </div>
-);
+  );
+};
 
 export default Header;

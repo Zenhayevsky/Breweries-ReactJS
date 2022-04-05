@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import bee from './images/bee.png';
 import { Navigate, Route, Link } from 'react-router-dom';
 import './App.css';
@@ -6,18 +6,21 @@ import './App.css';
 function App() {
 
   const [checked, setChecked] = useState(false);
-  const [filled, setFilled] = useState("");
   const [desabilitado, setDesabilitado] = useState(true)
 
+  const [ nome, setNome ] = useState("");
+
+  const armazenar = ( chave : any, valor: any ) => {
+    localStorage.setItem(chave, valor);
+    window.location.replace("/breweriesHome")
+  }
+
   useEffect(() => {
 
-    (checked && filled) ? setDesabilitado(false) : setDesabilitado(true)
+    (checked && nome) ? setDesabilitado(false) : setDesabilitado(true)
+    // console.log(`mudou o estado ${checked} e o nome para ${nome}`)
 
-  }, [checked, filled]);
-
-  useEffect(() => {
-    console.log(`mudou o estado ${checked} e o nome para ${filled}`)
-  }, [checked, filled]);
+  }, [checked, nome]);
 
   return (
     <div className="App">
@@ -35,7 +38,7 @@ function App() {
               </span>
             </ol>
             <ol>
-              <input className="placeForName" placeholder="Full name" onChange={e => setFilled(e.target.value)}></input>
+              <input value={nome} className="placeForName" placeholder="Full name" onChange={(e) => setNome(e.target.value)}></input>
             </ol>
             <ol className="sendData">
               <form>
@@ -44,7 +47,7 @@ function App() {
               </form>
             </ol>
             <ol className="sendData">
-              <button onClick={() => window.location.replace("/breweriesHome")} disabled={desabilitado} >Enter</button>
+              <button onClick={() => armazenar('ls_nome', nome)} disabled={desabilitado} >Enter</button>
             </ol>
           </ul>
         </section>
