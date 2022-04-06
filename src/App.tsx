@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import bee from './images/bee.png';
+import { Navigate, Route, Link } from 'react-router-dom';
 import './App.css';
 
 function App() {
+
+  const [checked, setChecked] = useState(false);
+  const [desabilitado, setDesabilitado] = useState(true)
+
+  const [ nome, setNome ] = useState("");
+
+  const armazenar = ( chave : any, valor: any ) => {
+    localStorage.setItem(chave, valor);
+    window.location.replace("/breweriesHome")
+  }
+
+  useEffect(() => {
+
+    (checked && nome) ? setDesabilitado(false) : setDesabilitado(true)
+    // console.log(`mudou o estado ${checked} e o nome para ${nome}`)
+
+  }, [checked, nome]);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -12,27 +31,27 @@ function App() {
               <span>
                 Please, enter your full name below
               </span>
-            </ol>  
+            </ol>
             <ol>
               <span>
                 Only alphabetical characters are accepted
               </span>
             </ol>
+            <ol>
+              <input value={nome} className="placeForName" placeholder="Full name" onChange={(e) => setNome(e.target.value)}></input>
+            </ol>
+            <ol className="sendData">
+              <form>
+                <input type="checkbox" checked={checked} onChange={e => setChecked(e.target.checked)} ></input>
+                <span>Are you older than 18 years old?</span>
+              </form>
+            </ol>
+            <ol className="sendData">
+              <button onClick={() => armazenar('ls_nome', nome)} disabled={desabilitado} >Enter</button>
+            </ol>
           </ul>
         </section>
-        <img src={bee} alt="logo" className="Bee-Logo"/>
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        {/* <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+        <img src={bee} alt="logo" className="Bee-Logo" />
       </header>
     </div>
   );

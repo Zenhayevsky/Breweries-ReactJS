@@ -1,0 +1,16 @@
+.breweriesList {
+  left:6.88%;
+  right:66.6%;
+  top: 16.6%;
+  bottom: 55.86%;
+  position: absolute;
+  float: left;
+}
+
+.title {
+  position:absolute;
+}
+
+.conteudo {
+  background-color: black;
+}
