@@ -7,10 +7,14 @@ function Header () {
 
   const nomeUsuario = localStorage.getItem('ls_nome');
 
+  function backbutton () {
+    localStorage.removeItem("ls_nome");
+  } 
+
   return (    
     <div className="header">
         <div>
-            <a href={"/"}>
+            <a href="/" onClick={backbutton}>
                 <img className="gobackImg" src={vector}></img>
             </a>
             <div className="goback">
