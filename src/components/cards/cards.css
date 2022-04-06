@@ -4,7 +4,7 @@
   box-sizing: border-box;
   border-radius: 4px;
   padding: 15px;
-  width: 382px;
+  width: 350px;
   height: 282px;
   float: left;
 
@@ -32,11 +32,9 @@
 .excluirIcon { 
   height: 16px;
   width: 14px;
-  position:absolute;
-  left: 200%;
-  top:10%;
-  bottom:10%;
-
+  position:relative;
+  float: right;
+  bottom: 45px;
 }
 
 .headcard {
@@ -52,4 +50,34 @@
   color: #27272A;
   font-style:normal;
   font-weight: 700;
+}
+
+.tags {
+
+  margin-top: 90px;
+  border-spacing: 10px;
+  border-radius: 99px;
+  position:relative;
+  border-collapse: separate;
+  align-self: flex-start;
+  display: block;
+  align-content: center;
+
+}
+
+td {
+  background-color: #F2EC54;
+  box-sizing: border-box;
+  border-radius: 99px;
+  padding: 8px;
+  width: 130px;
+  height: 32px;
+  align-items: center;
+}
+
+.teste {
+  margin-left: 25px;
+  margin-top: -23px;
+  justify-content: center;
+  margin-bottom: 0px;
 }
