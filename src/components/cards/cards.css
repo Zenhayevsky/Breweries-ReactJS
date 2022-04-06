@@ -54,7 +54,7 @@
 
 .tags {
 
-  margin-top: 90px;
+  margin-top: 35px;
   border-spacing: 10px;
   border-radius: 99px;
   position:relative;
@@ -78,6 +78,12 @@ td {
 .teste {
   margin-left: 25px;
   margin-top: -23px;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.ruabrewerie {  
+  margin-top: 15px;
   justify-content: center;
   margin-bottom: 0px;
 }

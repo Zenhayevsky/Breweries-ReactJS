@@ -47,8 +47,9 @@ function BreweriesHome () {
                 </div>
             </header>
             <main>
-                <section className="conteudo">
-                    <div className="breweriesList">
+                <section>
+                    <div>
+                        <div className="breweriesList">
                         <Card 
                         brewerieStreet={brewerieStreet}
                         brewerieName={brewerieName}
@@ -59,6 +60,57 @@ function BreweriesHome () {
                         brewerieTelefone={brewerieTelefone}
                         brewerieTipo={brewerieTipo}
                         />
+                        <Card 
+                        brewerieStreet={brewerieStreet}
+                        brewerieName={brewerieName}
+                        brewerieCidade={brewerieCidade}
+                        brewerieState={brewerieState}
+                        brewerieCountry={brewerieCountry} 
+                        brewerieCep={brewerieCep}
+                        brewerieTelefone={brewerieTelefone}
+                        brewerieTipo={brewerieTipo}
+                        />
+                        <Card 
+                        brewerieStreet={brewerieStreet}
+                        brewerieName={brewerieName}
+                        brewerieCidade={brewerieCidade}
+                        brewerieState={brewerieState}
+                        brewerieCountry={brewerieCountry} 
+                        brewerieCep={brewerieCep}
+                        brewerieTelefone={brewerieTelefone}
+                        brewerieTipo={brewerieTipo}
+                        />
+                        <Card 
+                        brewerieStreet={brewerieStreet}
+                        brewerieName={brewerieName}
+                        brewerieCidade={brewerieCidade}
+                        brewerieState={brewerieState}
+                        brewerieCountry={brewerieCountry} 
+                        brewerieCep={brewerieCep}
+                        brewerieTelefone={brewerieTelefone}
+                        brewerieTipo={brewerieTipo}
+                        />
+                        <Card 
+                        brewerieStreet={brewerieStreet}
+                        brewerieName={brewerieName}
+                        brewerieCidade={brewerieCidade}
+                        brewerieState={brewerieState}
+                        brewerieCountry={brewerieCountry} 
+                        brewerieCep={brewerieCep}
+                        brewerieTelefone={brewerieTelefone}
+                        brewerieTipo={brewerieTipo}
+                        />
+                                                <Card 
+                        brewerieStreet={brewerieStreet}
+                        brewerieName={brewerieName}
+                        brewerieCidade={brewerieCidade}
+                        brewerieState={brewerieState}
+                        brewerieCountry={brewerieCountry} 
+                        brewerieCep={brewerieCep}
+                        brewerieTelefone={brewerieTelefone}
+                        brewerieTipo={brewerieTipo}
+                        />
+                        </div>
                     </div>
                 </section>
             </main>

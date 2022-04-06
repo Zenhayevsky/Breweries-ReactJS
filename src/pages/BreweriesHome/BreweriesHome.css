@@ -1,16 +1,26 @@
 .breweriesList {
-  left:6.88%;
+  left:80px;
+  /* left:700px; */
   right:66.6%;
-  top: 16.6%;
+  top: 15.6%;
   bottom: 55.86%;
   position: absolute;
-  float: left;
+  width: 1270px;
+
+  padding: 30px;
+  justify-content: center;
+  justify-items: center;
+  display:grid !important;
+  grid-gap:30px;
+  /* grid-template-columns: repeat(3, 340px); */
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+
 }
 
 .title {
   position:absolute;
 }
 
-.conteudo {
-  background-color: black;
+.section {
+  width: 2000px;
 }

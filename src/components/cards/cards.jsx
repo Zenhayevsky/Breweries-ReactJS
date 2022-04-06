@@ -17,12 +17,12 @@ function Cards( props ) {
           <img className="excluirIcon" src={excluirImage} />
         </div>
       </div>
-      <div class="container">
-        <div>
+      <div>
+        <div className="ruabrewerie">
           <span>{props.brewerieStreet} </span>
         </div>
-        <div>
-          <span>{props.brewerieCidade} {props.brewerieState} - {props.brewerieCountry} </span>
+        <div className="ruabrewerie">
+          <span  >{props.brewerieCidade} {props.brewerieState} - {props.brewerieCountry} </span>
         </div>
       </div>
       <table className="tags">
