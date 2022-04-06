@@ -1,0 +1,55 @@
+.divCard {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 15px;
+  width: 382px;
+  height: 282px;
+  float: left;
+
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  height: 54px;
+  top: 85px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color:#3F3F46;
+  position: absolute;
+}
+
+.teste {
+  align-items: flex-start;
+  ;
+}
+
+.excluirIcon { 
+  height: 16px;
+  width: 14px;
+  position:absolute;
+  left: 200%;
+  top:10%;
+  bottom:10%;
+
+}
+
+.headcard {
+  margin-top: 20px;
+}
+
+.nomeBrewerie {
+  font-family: 'Work Sans';
+  font-size: 20px;
+  line-height: 150%;
+  display: flex;
+  align-items: flex-end;
+  color: #27272A;
+  font-style:normal;
+  font-weight: 700;
+}

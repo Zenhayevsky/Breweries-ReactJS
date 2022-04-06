@@ -22,6 +22,7 @@
   line-height:150%;
   margin-left: 76px;
   margin-top: 13px;
+  white-space: nowrap;
 }
 
 .nomeUsuario {

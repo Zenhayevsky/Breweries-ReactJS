@@ -4,11 +4,7 @@ import vector from '../../images/Vector.png';
 
 
 function Header () {
-    // const useStateWithLocalStorage = (nome : any) => {
-    //     const [name, setName] = React.useState(
-    //       localStorage.getItem(nome) || ''
-    //       );
-    //     }
+
   const nomeUsuario = localStorage.getItem('ls_nome');
 
   return (    

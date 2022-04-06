@@ -25,12 +25,12 @@
   gap: 12px;
   padding:10px;
   font-size: 16px;
-  font-weight: 400;
   font-family: Work Sans;
 }
 
 section {
   margin-top: 0px;
+  white-space: nowrap;
 }
 
 ol {
@@ -80,7 +80,7 @@ button {
   color: black;
   font-style: normal;  
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 21px;
   font-family: Work Sans;
   height: 800px;

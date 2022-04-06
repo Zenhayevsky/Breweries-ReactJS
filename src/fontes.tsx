@@ -1,7 +1,7 @@
 function Font() {
   return (
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap');
 </style>
   )
 }
