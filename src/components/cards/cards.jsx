@@ -7,20 +7,25 @@ import completo from '../../images/completo.png';
 
 function Cards( props ) {
 
-  let nome = props.brewerie.name;
-  let cep = props.brewerie.postal_code;
-  let phone = props.brewerie.phone;
-  let street = props.brewerie.street;
-  let city = props.brewerie.city;
-  let country = props.brewerie.country;
-  let type = props.brewerie.brewery_type;
-  let state = props.brewerie.state;
+  const nomecompleto = props.brewerie.name;
+  const cep = props.brewerie.postal_code;
+  const phone = props.brewerie.phone;
+  const street = props.brewerie.street;
+  const city = props.brewerie.city;
+  const country = props.brewerie.country;
+  const type = props.brewerie.brewery_type;
+  const state = props.brewerie.state;
+
+  const nomeformatado = [];
+  for (let i =0; i <26; i++) {
+    nomeformatado.push(nomecompleto[i])
+  }
 
   return (
     <div className="divCard">
       <div className="headcard">
         <div className="nomeBrewerie">
-          <span><b>{nome}</b></span>
+          <span><b>{nomeformatado}</b></span>
         </div>
         <div>
           <img className="excluirIcon" src={excluirImage} />
