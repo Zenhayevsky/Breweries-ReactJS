@@ -17,7 +17,10 @@ function App() {
 
   useEffect(() => {
 
-    (checked && nome) ? setDesabilitado(false) : setDesabilitado(true)
+    const tamanhoNoome = nome.length;
+    const incluiEspaco = nome.includes(" ");
+
+    (checked && nome && tamanhoNoome > 5 && incluiEspaco ) ? setDesabilitado(false) : setDesabilitado(true)
     // console.log(`mudou o estado ${checked} e o nome para ${nome}`)
 
   }, [checked, nome]);
