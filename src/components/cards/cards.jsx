@@ -1,55 +1,38 @@
-import React, { useState, useEffect } from "react";
+
 import './cards.css';
 import excluirImage from '../../images/excluir.png';
 import telefone from '../../images/telefone.png';
 import tipo from '../../images/tipo.png';
 import completo from '../../images/completo.png';
-import axios from 'axios';
 
-function Cards() {
+function Cards( props ) {
 
-  const [brewerieStreet, setBrewerieStreet] = useState('');
-  const [brewerieName, setBrewerieName] = useState('');
-  const [brewerieCidade, setBrewerieCidade] = useState('');
-  const [brewerieState, setBrewerieState] = useState('');
-  const [brewerieCountry, setBrewerieCountry] = useState('');
-  const [brewerieCep, setBrewerieCep] = useState('');
-  const [brewerieTelefone, setBrewerieTelefone] = useState('');
-  const [brewerieTipo, setBrewerieTipo] = useState('');
-
-
-  useEffect(() => {
-
-    axios.get('https://api.openbrewerydb.org/breweries?by_postal=44107')
-      .then((response) => {
-        const brewerieChegando = response.data;
-        setBrewerieStreet(brewerieChegando[1].street);
-        setBrewerieName(brewerieChegando[1].name);
-        setBrewerieCidade(brewerieChegando[1].city);
-        setBrewerieState(brewerieChegando[1].state);
-        setBrewerieCountry(brewerieChegando[1].country);
-        setBrewerieCep(brewerieChegando[1].postal_code);
-        setBrewerieTelefone(brewerieChegando[1].phone);
-        setBrewerieTipo(brewerieChegando[1].brewery_type);
-      });
-  }, []);
+  let nome = props.brewerie.name;
+  let cep = props.brewerie.postal_code;
+  let phone = props.brewerie.phone;
+  let street = props.brewerie.street;
+  let city = props.brewerie.city;
+  let country = props.brewerie.country;
+  let type = props.brewerie.brewery_type;
+  let state = props.brewerie.state;
 
   return (
     <div className="divCard">
       <div className="headcard">
         <div className="nomeBrewerie">
-          <span><b>{brewerieName}</b></span>
+          <span><b>{nome}</b></span>
         </div>
         <div>
           <img className="excluirIcon" src={excluirImage} />
+          <button className="btnExcluir"></button>
         </div>
       </div>
-      <div class="container">
-        <div>
-          <span>{brewerieStreet} </span>
+      <div>
+        <div className="ruabrewerie">
+          <span>{street} </span>
         </div>
-        <div>
-          <span>{brewerieCidade} {brewerieState} - {brewerieCountry} </span>
+        <div className="ruabrewerie">
+          <span  >{city} {state} - {country} </span>
         </div>
       </div>
       <table className="tags">
@@ -57,13 +40,13 @@ function Cards() {
           <td>
             <img src={tipo} />
             <p className="teste">
-              {brewerieTipo}
+              {type}
             </p>
           </td>
           <td>
             <img src={completo} />
             <p className="teste">
-              {brewerieCep}
+              {cep}
             </p>
           </td>
         </tr>
@@ -71,7 +54,7 @@ function Cards() {
           <td>
             <img src={telefone} />
             <p className="teste">
-              {brewerieTelefone}
+              {phone}
             </p>
           </td>
         </tr>
