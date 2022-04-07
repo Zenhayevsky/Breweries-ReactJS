@@ -7,22 +7,32 @@ import completo from '../../images/completo.png';
 
 function Cards( props ) {
 
+  let nome = props.brewerie.name;
+  let cep = props.brewerie.postal_code;
+  let phone = props.brewerie.phone;
+  let street = props.brewerie.street;
+  let city = props.brewerie.city;
+  let country = props.brewerie.country;
+  let type = props.brewerie.brewery_type;
+  let state = props.brewerie.state;
+
   return (
     <div className="divCard">
       <div className="headcard">
         <div className="nomeBrewerie">
-          <span><b>{props.brewerieName}</b></span>
+          <span><b>{nome}</b></span>
         </div>
         <div>
           <img className="excluirIcon" src={excluirImage} />
+          <button className="btnExcluir"></button>
         </div>
       </div>
       <div>
         <div className="ruabrewerie">
-          <span>{props.brewerieStreet} </span>
+          <span>{street} </span>
         </div>
         <div className="ruabrewerie">
-          <span  >{props.brewerieCidade} {props.brewerieState} - {props.brewerieCountry} </span>
+          <span  >{city} {state} - {country} </span>
         </div>
       </div>
       <table className="tags">
@@ -30,13 +40,13 @@ function Cards( props ) {
           <td>
             <img src={tipo} />
             <p className="teste">
-              {props.brewerieTipo}
+              {type}
             </p>
           </td>
           <td>
             <img src={completo} />
             <p className="teste">
-              {props.brewerieCep}
+              {cep}
             </p>
           </td>
         </tr>
@@ -44,7 +54,7 @@ function Cards( props ) {
           <td>
             <img src={telefone} />
             <p className="teste">
-              {props.brewerieTelefone}
+              {phone}
             </p>
           </td>
         </tr>

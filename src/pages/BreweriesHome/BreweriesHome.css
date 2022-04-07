@@ -6,6 +6,7 @@
   bottom: 55.86%;
   position: absolute;
   width: 1270px;
+  max-height: 300px;
 
   padding: 30px;
   justify-content: center;
@@ -23,4 +24,12 @@
 
 .section {
   width: 2000px;
+}
+
+.total {
+  max-height: 300px;
+}
+
+head {
+  background-color: black;
 }

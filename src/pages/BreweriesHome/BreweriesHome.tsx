@@ -6,41 +6,22 @@ import axios from 'axios';
 
 function BreweriesHome () {
 
-    const [brewerieStreet, setBrewerieStreet] = useState('');
-    const [brewerieName, setBrewerieName] = useState('');
-    const [brewerieCidade, setBrewerieCidade] = useState('');
-    const [brewerieState, setBrewerieState] = useState('');
-    const [brewerieCountry, setBrewerieCountry] = useState('');
-    const [brewerieCep, setBrewerieCep] = useState('');
-    const [brewerieTelefone, setBrewerieTelefone] = useState('');
-    const [brewerieTipo, setBrewerieTipo] = useState('');
-  
     const [array, setArray] = useState([]);
-  
-  
-    useEffect (() => {
-  
-    }, [brewerieStreet, brewerieName, brewerieCidade, brewerieState, brewerieCountry, brewerieCep, brewerieTelefone,brewerieTipo]);
+    const limite = [1,2,3,4,5,6]
   
     useEffect(() => {
   
-      axios.get('https://api.openbrewerydb.org/breweries?by_postal=44107')
+      axios.get('https://api.openbrewerydb.org/breweries?by_state=new_york')
         .then((response) => {
           const brewerieChegando = response.data;
-          setBrewerieStreet(brewerieChegando[1].street);
-          setBrewerieName(brewerieChegando[1].name);
-          setBrewerieCidade(brewerieChegando[1].city);
-          setBrewerieState(brewerieChegando[1].state);
-          setBrewerieCountry(brewerieChegando[1].country);
-          setBrewerieCep(brewerieChegando[1].postal_code);
-          setBrewerieTelefone(brewerieChegando[1].phone);
-          setBrewerieTipo(brewerieChegando[1].brewery_type);
+          console.log(brewerieChegando)
+          setArray(brewerieChegando);
         });
     }, []);
 
     return (
     <div>
-        <body className="conteudo">
+        <body className="total">
             <header className="title">
                 <div>
                     <Header />
@@ -50,66 +31,11 @@ function BreweriesHome () {
                 <section>
                     <div>
                         <div className="breweriesList">
-                        <Card 
-                        brewerieStreet={brewerieStreet}
-                        brewerieName={brewerieName}
-                        brewerieCidade={brewerieCidade}
-                        brewerieState={brewerieState}
-                        brewerieCountry={brewerieCountry} 
-                        brewerieCep={brewerieCep}
-                        brewerieTelefone={brewerieTelefone}
-                        brewerieTipo={brewerieTipo}
-                        />
-                        <Card 
-                        brewerieStreet={brewerieStreet}
-                        brewerieName={brewerieName}
-                        brewerieCidade={brewerieCidade}
-                        brewerieState={brewerieState}
-                        brewerieCountry={brewerieCountry} 
-                        brewerieCep={brewerieCep}
-                        brewerieTelefone={brewerieTelefone}
-                        brewerieTipo={brewerieTipo}
-                        />
-                        <Card 
-                        brewerieStreet={brewerieStreet}
-                        brewerieName={brewerieName}
-                        brewerieCidade={brewerieCidade}
-                        brewerieState={brewerieState}
-                        brewerieCountry={brewerieCountry} 
-                        brewerieCep={brewerieCep}
-                        brewerieTelefone={brewerieTelefone}
-                        brewerieTipo={brewerieTipo}
-                        />
-                        <Card 
-                        brewerieStreet={brewerieStreet}
-                        brewerieName={brewerieName}
-                        brewerieCidade={brewerieCidade}
-                        brewerieState={brewerieState}
-                        brewerieCountry={brewerieCountry} 
-                        brewerieCep={brewerieCep}
-                        brewerieTelefone={brewerieTelefone}
-                        brewerieTipo={brewerieTipo}
-                        />
-                        <Card 
-                        brewerieStreet={brewerieStreet}
-                        brewerieName={brewerieName}
-                        brewerieCidade={brewerieCidade}
-                        brewerieState={brewerieState}
-                        brewerieCountry={brewerieCountry} 
-                        brewerieCep={brewerieCep}
-                        brewerieTelefone={brewerieTelefone}
-                        brewerieTipo={brewerieTipo}
-                        />
-                                                <Card 
-                        brewerieStreet={brewerieStreet}
-                        brewerieName={brewerieName}
-                        brewerieCidade={brewerieCidade}
-                        brewerieState={brewerieState}
-                        brewerieCountry={brewerieCountry} 
-                        brewerieCep={brewerieCep}
-                        brewerieTelefone={brewerieTelefone}
-                        brewerieTipo={brewerieTipo}
-                        />
+                        {array.map((i) => (
+                            <Card 
+                            brewerie={i}
+                            />
+                        ))}
                         </div>
                     </div>
                 </section>
