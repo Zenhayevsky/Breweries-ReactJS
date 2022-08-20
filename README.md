@@ -6,14 +6,24 @@ Sistema construido para usuarios que buscam informacoes sobre cervejarias nos Es
 
 Foi necessario instalar:
 
-- styled components :
-npm install --save @types/styled-components
+1 -  styled components :
+```
 
-- React router dom versao 6:
-npm install react-router-dom@6
+   npm install --save @types/styled-components
 
-- axios :
-npm install axios
+```
+2 React router dom versao 6:
+```
+
+   npm install react-router-dom@6
+
+```
+3 -  axios :
+```
+
+   npm install axios
+
+```
 
 ### Run the application locally
 
