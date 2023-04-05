@@ -1,9 +1,9 @@
 
-import Login from './pages/Login/Login';
+import BreweriesHome from './pages/BreweriesHome/BreweriesHome';
 
 function App() {
   return (
-    <Login />
+    <BreweriesHome />
   );
 }
 
